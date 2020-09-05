@@ -14,6 +14,6 @@ urlpatterns = [
     path('privacy', views.privacy, name='privacy'),
     path('signup', views.handleSignup, name='handleSignup'),
     path('login', views.handleLogin, name='handleLogin'),
-    path('logout', views.handleLogout, name='handleLogout')
+    path('logout', views.handleLogout, name='handleLogout'),
 ]
 

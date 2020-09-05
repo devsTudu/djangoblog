@@ -10,6 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+#for gmail
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS=True
+EMAIL_USE_SSL=False
+EMAIL_HOSTS = 'smtp.gmail.com'
+EMAIL_HOSTS_USER='arshadaman202@gmail.com'
+EMAIL_HOSTS_PASSWORD='amanarshad202'
+EMAIL_PORT=587
+
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
@@ -30,7 +39,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 if DEBUG:
-    EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 else:
     pass #This is for production level
 
@@ -49,6 +59,7 @@ INSTALLED_APPS = [
     'ebook.apps.EbookConfig',
     'django.contrib.humanize',
     'ckeditor',
+    'social_django',
     'ckeditor_uploader'
 ]
 CKEDITOR_UPLOAD_PATH = 'uploads/'
@@ -140,4 +151,8 @@ STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
 MESSAGE_TAGS={
     messages.ERROR:'danger'
 }
-
+# For oAuth
+# AUTHENTICATION_BACKENDS = (
+#     'social_core.backends.google.GoogleOAuth2',
+#     'django.contrib.auth.backends.ModelBackend',
+# )

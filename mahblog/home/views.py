@@ -1,4 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import Contact
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -82,6 +84,7 @@ def handleSignup(request):
         myuser.first_name=fname
         myuser.last_name=lname
         myuser.save()
+        # # send_mail(subject, message, from_email,to_list, fail_silently=True)
         messages.success(request," Your Account has been created. We welcome you to Mad About Hacking.😄")
         return redirect('home')
 
@@ -101,7 +104,6 @@ def handleLogin(request):
                 login(request,user)
                 messages.success(request,' Successfully Logged In😉')
                 return redirect('home')
-
             else:
                 messages.error(request,' Cannot Authenticate! Invald Username/Password😣')
                 return redirect('home')
