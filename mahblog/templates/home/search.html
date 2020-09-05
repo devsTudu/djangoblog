@@ -1,8 +1,5 @@
 
 {% extends "base.html" %}
-<style>
-
-</style>
 {% block content %}
 
 
@@ -19,7 +16,7 @@
                 <a class="text-dark" href="/blog/{{post.slug}}">{{post.title}}</a>
               </h3>
               <div class="mb-1 text-muted">{{post.datetime}}</div>
-              <p class="card-text mb-auto">{{post.content| truncatechars:450}}</p>
+              <p class="card-text mb-auto">{{post.content| truncatechars:450 | safe}}</p>
               <a href="/blog/{{post.slug}}" role="button"class="btn btn-primary">Continue reading</a>
             </div>
 </div>

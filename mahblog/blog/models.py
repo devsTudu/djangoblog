@@ -15,7 +15,7 @@ class Post(models.Model):
     title=models.CharField(max_length=255)
     content=RichTextUploadingField(blank=True)
     author=models.CharField(max_length=100)
-    suggest=models.URLField(max_length=200,default='None')
+    suggest=models.CharField(max_length=200,default='None')
     slug=models.CharField(max_length=100, default='')
     views=models.IntegerField(default=0)
     category=models.CharField(max_length=255, default='')

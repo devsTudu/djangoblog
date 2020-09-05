@@ -1,19 +1,17 @@
 {% extends "base.html" %}
 {%block homeactive %}active{%endblock homeactive%}
 {% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-    body {
-        font-family: sans-serif;
-        font-size: 18px;
-        background-color: white;
-    }
-
     .head_text {
         color: white;
     }
 
     .card {
+        font-family: Noto Sans JP;
         box-shadow: 0 16px 48px #E3E7EB;
     }
 
@@ -21,41 +19,11 @@
         background-color: indigo;
     }
 
-    @keyframes glow {
-        from {
-            text-shadow: 1px 1px #0008ff;
-        }
-
-        to {
-            text-shadow: 3px 3px #e9ecef;
-        }
-
-    }
-
     .display-4 {
         padding: 0;
-        color: #c75724;
-        animation-name: glow;
-        animation-duration: 0.7s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        text-shadow: 2px 2px red;
+        color: #F28F3B;
     }
 </style>
-<header class="masthead">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class=" col-md-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h1 class=" site-heading my-4 mt-3 text-white">Mad About Hacking </h1>
-                    <p class="text-light" id="slogan">Post on Demand
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 <div class="container">
     {% comment %} Blog post in Home Page {% endcomment %}
     <div class="container my-2">
@@ -65,8 +33,9 @@
             <p>Mad About Hacking is a small group having a vision to provide quality <strong>free</strong> technical
                 education to everyone.</p>
             <hr class="my-4">
-            <p><em>Hope to get support from Dear Reader.<em></p>
+            <p>Hope to get support from Dear Reader.</p>
             <p class="lead">
+            <href="http://t.me/mah2422" target="_blank"><i class="fa fa-telegram"style="font-size:30px;color:#F28F3B"></i> 
                 <a class="btn btn-primary btn-lg" href="http://t.me/mah2422" target="_blank" role="button">Join Telegram
                     Group</a>
             </p>
@@ -77,7 +46,7 @@
             <p>Explore our blog to gain knowledge. If you can't find the topic you are searching for, then please let us
                 know via contact form in our contact page. We will love to help you</p>
             <hr class="my-4">
-            <p><em>Learn to Earn<em></p>
+            <p>Learn to Earn</p>
             <p class="lead">
                 <a class="btn btn-warning btn-lg" href="/blog" role="button">Explore Blog</a>
             </p>

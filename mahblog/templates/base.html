@@ -3,21 +3,23 @@
 
 <head>
   {% load static %}
+  
   <!-- tiledesk -->
-      <script type="application/javascript">
-      window.tiledeskSettings = 
-        {
-        projectid: "5f528a535614f8001944e148"
-        };
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "https://widget.tiledesk.com/v4/launch.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'tiledesk-jssdk'));
-    </script>
-    <!-- tiledesk end -->
+  <script type="application/javascript">
+    window.tiledeskSettings =
+    {
+      projectid: "5f528a535614f8001944e148"
+    };
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://widget.tiledesk.com/v4/launch.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'tiledesk-jssdk'));
+  </script>
+  <!-- tiledesk end -->
+
   <title>Mad About Hacking</title>
   <link rel="apple-touch-icon" sizes="180x180" href="{%static 'img/apple-touch-icon.png'%}">
   <link rel="icon" type="image/png" sizes="32x32" href="{%static 'img/favicon-32x32.png'%}">
@@ -43,9 +45,13 @@
 <body>
 
   <style>
+      	p {
+  	font-family: "Noto Sans JP";
+  	font-size: 1em;
+  	}
     body {
-      font-family: sans-serif;
-      font-size: 18px;
+      font-family: "Noto Sans JP 500";
+      font-size: 1.3em;
       background-color: white;
       overflow-x: hidden;
     }
@@ -87,6 +93,11 @@
       /* font-size: 110%; */
       transform: scale(1.1);
       border-bottom: 1px solid beige;
+    }
+    .masthead {
+        background-color: indigo;
+    }
+
   </style>
 
   <!-- Navigation -->
@@ -157,6 +168,20 @@
     </button>
   </div>
   {% endfor %}
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1 class=" site-heading my-4 mt-3 text-white">Mad About Hacking </h1>
+                    <p class="text-light" id="slogan">We Post On your Demand
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
   {% block content %}
   <!-- Content Goes here -->
   {% endblock content %}
@@ -252,49 +277,6 @@
     <p class="m-0 text-dark text-center "><a href=/privacy>Privacy Policy</a></p>
   </footer>
 
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyDHFs4_56-wzL_ZsmSbxhwyXJYP1VVvhgc",
-      authDomain: "mah2422-b77df.firebaseapp.com",
-      databaseURL: "https://mah2422-b77df.firebaseio.com",
-      projectId: "mah2422-b77df",
-      storageBucket: "mah2422-b77df.appspot.com",
-      messagingSenderId: "1015925040354",
-      appId: "1:1015925040354:web:96a555d735e8d4f6a5eabb",
-      measurementId: "G-35ZM303GH5"
-    };
-
-// Initialize Firebase
-
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-  </script>
-{% comment %} <!-- ClickDesk Live Chat Service for websites -->
-<script type='text/javascript'>
-var _glc =_glc || []; _glc.push('all_ag9zfmNsaWNrZGVza2NoYXRyEgsSBXVzZXJzGICAiPGL8coKDA');
-if(document.location.hostname != 'localhost'){
-	var glcpath = (('https:' == document.location.protocol) ? 'https://my.clickdesk.com/clickdesk-ui/browser/' : 
-	'http://my.clickdesk.com/clickdesk-ui/browser/');
-	var glcp = (('https:' == document.location.protocol) ? 'https://' : 'http://');
-}else{
-	var glcpath = 'http://localhost:8888/clickdesk-ui/browser/';
-	var glcp = 'http://';
-}
-var glcspt = document.createElement('script'); glcspt.type = 'text/javascript'; 
-glcspt.async = true; glcspt.src = glcpath + 'livechat-cloud-new.js';
-var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glcspt, s);
-</script>
-<!-- End of ClickDesk --> {% endcomment %}
 </body>
 
 </html>

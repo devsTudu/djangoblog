@@ -1,13 +1,6 @@
 
 {% extends "base.html" %}
 
-
-{% comment %} <script>
-let previews=document.getElementByClassName('preview');
-Array.from(previews).forEach((element)=>{
-  element.innerHTML=element.innerText;
-})
-</script> {% endcomment %}
 {% block content %}
 <style>
     body {
@@ -21,27 +14,10 @@ Array.from(previews).forEach((element)=>{
     }
     
     .card {
+        font-family: Noto Sans JP;
         box-shadow: 0 16px 48px #E3E7EB;
     }
-    .masthead
-    {
-    background-color:indigo;
-    }
 </style>
-    <header class="masthead">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class=" col-md-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1 class=" site-heading my-4 mt-3e text-white">Mad About Hacking </h1>
-                        <p class= "text-white"id="slogan">Post On Demand
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
 <div class="container">
 <hr><h3 >Blog Articles:</h3><hr>

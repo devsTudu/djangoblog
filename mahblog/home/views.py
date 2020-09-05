@@ -73,6 +73,7 @@ def handleSignup(request):
                 return redirect('home')
         if User.objects.filter(username = request.POST['username']).exists():
                 messages.warning(request,'You Got The Error as the username already exits. Try unique username')
+                return redirect('home')
         if pass1 != pass2:
                 messages.warning(request," Passwords did not Match.")
                 return redirect('home')
