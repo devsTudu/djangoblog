@@ -1,28 +1,40 @@
-<style>
-@keyframes head {
-  from {color: violet;}
-  to {color: lime;}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
 
+<style>
+}
+form {
+    width: 500px;
+    overflow: hidden;
+    background-color: yellow;
+}
+input {
+    width: 100%;
+    font-family: Lato;
+}
+span {
+    display: block;
+    overflow: hidden;
+    padding-right:10px;
+}
+button {
+    float: right;
 }
 h1 {
     
-    display:flex;
-    color: #ff0000;
-    
-    animation-name: head;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    text-shadow: 1px 1px green;
+    font-family: Noto Sans JP;
+    color: #F28F3B;
+  
 }
 
 .formcon{
 margin:5px;
 padding:5px;
-border:2px solid lime;
+border:2px silver;
 border-radius:5px;
 
-background-color:#e8c86f;
+background-color:#FFD5C2;
 
     body {
         font-family:sans-serif;
@@ -35,7 +47,7 @@ background-color:#e8c86f;
     }
     
     .card {
-        box-shadow: 0 16px 48px #E3E7EB;
+        box-shadow: 0 16px 48px #EEEEEE;
     }
 
 }
@@ -46,7 +58,7 @@ background-color:#e8c86f;
 {% block content %}
 <style>
     body {
-        font-family: sans-serif;
+        font-family: Lora;
         font-size: 18px;
         background-color: white;
     }
@@ -56,11 +68,29 @@ background-color:#e8c86f;
     }
 
     .card {
-        font-family: Noto Sans JP;
         box-shadow: 0 16px 48px #E3E7EB;
     }
 
+    .masthead {
+        background-color: white;
+    }
 </style>
+
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1 class=" site-heading my-4 mt-3">Contact Us</h1>
+                        <p class="text-light" id="slogan">It will be our plasure to serve you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
 <div class="jumbotron jumbotron-fluid">
 
 <div class="container">
@@ -75,20 +105,20 @@ background-color:#e8c86f;
   <div class="form-group">
     <label for="email">Email address</label>
     <input type="email" class="form-control" id="email" name="email"aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" style="font-size: 0.7em"class="form-text text-muted">We take your privacy seriously.</small>
   </div>
-  <div class="form-group">
+  <!--<div class="form-group">
     <label for="Phone Number">Phone Number</label>
     <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number with Country code">
   </div>
   <div class="form-group">
     <label for="Social Media">Your Social Media Handle</label>
     <input type="text" class="form-control" id="socialmedia" name="socialmedia"aria-describedby="socialmedialink" placeholder="Your facebook or instagram or twitter or linkdin or any other social media profile link.">
-  </div>
+  </div>-->
   <div class="form-group">
     <label for="content">How can we assist you:</label>
     
-    <textarea class="form-control"name="content"id="content" name="msg" cols="30" rows="5"></textarea>
+    <textarea placeholder="Write your query" class="form-control"name="content"id="content" name="msg" cols="30" rows="5"></textarea>
   </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
